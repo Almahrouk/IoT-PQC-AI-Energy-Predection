@@ -1,0 +1,123 @@
+Downloading https://services.gradle.org/distributions/gradle-8.14.2-bin.zip
+.............10%.............20%.............30%.............40%.............50%.............60%.............70%.............80%.............90%..............100%
+
+Welcome to Gradle 8.14.2!
+
+Here are the highlights of this release:
+ - Java 24 support
+ - GraalVM Native Image toolchain selection
+ - Enhancements to test reporting
+ - Build Authoring improvements
+
+For more details see https://docs.gradle.org/8.14.2/release-notes.html
+
+Starting a Gradle Daemon (subsequent builds will be faster)
+> Task :compileJava UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+
+> Task :run
+[32mINFO  [main] [Cooja.java:1145] - Loading /home/user/contiki-ng/examples/pqc-iot-sim/experiments/exp02_pqc_stubs/exp02.csc random seed: null[0;39m
+> make COOJA_VIB_SENSOR=0 COOJA_BUTTON=0 COOJA_PIR_SENSOR=0 COOJA_LED=0 COOJA_CFS=0 COOJA_EEPROM=0 -j8 pqc-root-node.cooja TARGET=cooja
+  LD        build/cooja/pqc-root-node.cooja
+> make COOJA_VIB_SENSOR=0 COOJA_BUTTON=0 COOJA_PIR_SENSOR=0 COOJA_LED=0 COOJA_CFS=0 COOJA_EEPROM=0 -j8 pqc-stub-node.cooja TARGET=cooja
+  LD        build/cooja/pqc-stub-node.cooja
+[32mINFO  [main] [LogScriptEngine.java:231] - Script timeout in 180000 ms[0;39m
+[1;91mERROR [main] [ScriptRunner.java:311] - Test script error: [0;39m
+javax.script.ScriptException: <eval>:62:42 Missing close quote
+    log.log("Node finished: " + done + "/3
+                                          ^ in <eval> at line number 62 at column number 42
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:463)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.asCompiledScript(NashornScriptEngine.java:489)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.compile(NashornScriptEngine.java:178)
+	at org.contikios.cooja.LogScriptEngine.compileScript(LogScriptEngine.java:232)
+	at org.contikios.cooja.plugins.ScriptRunner.activateScript(ScriptRunner.java:309)
+	at org.contikios.cooja.plugins.ScriptRunner.setConfigXML(ScriptRunner.java:454)
+	at org.contikios.cooja.Cooja.startPlugin(Cooja.java:621)
+	at org.contikios.cooja.Simulation.startPlugin(Simulation.java:426)
+	at org.contikios.cooja.Simulation.<init>(Simulation.java:398)
+	at org.contikios.cooja.Cooja.createSimulation(Cooja.java:1241)
+	at org.contikios.cooja.Cooja.go(Cooja.java:1150)
+	at org.contikios.cooja.Main.main(Main.java:312)
+Caused by: org.openjdk.nashorn.internal.runtime.ParserException: <eval>:62:42 Missing close quote
+    log.log("Node finished: " + done + "/3
+                                          ^
+	at org.openjdk.nashorn.internal.parser.Lexer.error(Lexer.java:1850)
+	at org.openjdk.nashorn.internal.parser.Lexer.scanString(Lexer.java:1002)
+	at org.openjdk.nashorn.internal.parser.Lexer.lexify(Lexer.java:1708)
+	at org.openjdk.nashorn.internal.parser.AbstractParser.getToken(AbstractParser.java:135)
+	at org.openjdk.nashorn.internal.parser.AbstractParser.nextToken(AbstractParser.java:214)
+	at org.openjdk.nashorn.internal.parser.AbstractParser.nextOrEOL(AbstractParser.java:173)
+	at org.openjdk.nashorn.internal.parser.AbstractParser.next(AbstractParser.java:160)
+	at org.openjdk.nashorn.internal.parser.AbstractParser.expectValue(AbstractParser.java:367)
+	at org.openjdk.nashorn.internal.parser.AbstractParser.getIdent(AbstractParser.java:430)
+	at org.openjdk.nashorn.internal.parser.Parser.primaryExpression(Parser.java:2742)
+	at org.openjdk.nashorn.internal.parser.Parser.memberExpression(Parser.java:3598)
+	at org.openjdk.nashorn.internal.parser.Parser.leftHandSideExpression(Parser.java:3382)
+	at org.openjdk.nashorn.internal.parser.Parser.unaryExpression(Parser.java:4397)
+	at org.openjdk.nashorn.internal.parser.Parser.expression(Parser.java:4611)
+	at org.openjdk.nashorn.internal.parser.Parser.expression(Parser.java:4568)
+	at org.openjdk.nashorn.internal.parser.Parser.conditionalExpression(Parser.java:4720)
+	at org.openjdk.nashorn.internal.parser.Parser.assignmentExpression(Parser.java:4659)
+	at org.openjdk.nashorn.internal.parser.Parser.argumentList(Parser.java:3703)
+	at org.openjdk.nashorn.internal.parser.Parser.leftHandSideExpression(Parser.java:3385)
+	at org.openjdk.nashorn.internal.parser.Parser.unaryExpression(Parser.java:4397)
+	at org.openjdk.nashorn.internal.parser.Parser.expression(Parser.java:4568)
+	at org.openjdk.nashorn.internal.parser.Parser.conditionalExpression(Parser.java:4720)
+	at org.openjdk.nashorn.internal.parser.Parser.assignmentExpression(Parser.java:4659)
+	at org.openjdk.nashorn.internal.parser.Parser.expression(Parser.java:4537)
+	at org.openjdk.nashorn.internal.parser.Parser.expressionStatement(Parser.java:1840)
+	at org.openjdk.nashorn.internal.parser.Parser.statement(Parser.java:1146)
+	at org.openjdk.nashorn.internal.parser.Parser.statement(Parser.java:1019)
+	at org.openjdk.nashorn.internal.parser.Parser.statementList(Parser.java:1452)
+	at org.openjdk.nashorn.internal.parser.Parser.getBlock(Parser.java:603)
+	at org.openjdk.nashorn.internal.parser.Parser.getStatement(Parser.java:628)
+	at org.openjdk.nashorn.internal.parser.Parser.getStatement(Parser.java:623)
+	at org.openjdk.nashorn.internal.parser.Parser.ifStatement(Parser.java:1871)
+	at org.openjdk.nashorn.internal.parser.Parser.statement(Parser.java:1039)
+	at org.openjdk.nashorn.internal.parser.Parser.statement(Parser.java:1019)
+	at org.openjdk.nashorn.internal.parser.Parser.statementList(Parser.java:1452)
+	at org.openjdk.nashorn.internal.parser.Parser.getBlock(Parser.java:603)
+	at org.openjdk.nashorn.internal.parser.Parser.getStatement(Parser.java:628)
+	at org.openjdk.nashorn.internal.parser.Parser.getStatement(Parser.java:623)
+	at org.openjdk.nashorn.internal.parser.Parser.whileStatement(Parser.java:2134)
+	at org.openjdk.nashorn.internal.parser.Parser.statement(Parser.java:1045)
+	at org.openjdk.nashorn.internal.parser.Parser.statement(Parser.java:1019)
+	at org.openjdk.nashorn.internal.parser.Parser.statementList(Parser.java:1452)
+	at org.openjdk.nashorn.internal.parser.Parser.getBlock(Parser.java:603)
+	at org.openjdk.nashorn.internal.parser.Parser.tryStatement(Parser.java:2614)
+	at org.openjdk.nashorn.internal.parser.Parser.statement(Parser.java:1069)
+	at org.openjdk.nashorn.internal.parser.Parser.sourceElements(Parser.java:900)
+	at org.openjdk.nashorn.internal.parser.Parser.functionBody(Parser.java:4165)
+	at org.openjdk.nashorn.internal.parser.Parser.functionExpression(Parser.java:3795)
+	at org.openjdk.nashorn.internal.parser.Parser.statement(Parser.java:1090)
+	at org.openjdk.nashorn.internal.parser.Parser.sourceElements(Parser.java:900)
+	at org.openjdk.nashorn.internal.parser.Parser.program(Parser.java:835)
+	at org.openjdk.nashorn.internal.parser.Parser.parse(Parser.java:322)
+	at org.openjdk.nashorn.internal.parser.Parser.parse(Parser.java:282)
+	at org.openjdk.nashorn.internal.runtime.Context.compile(Context.java:1484)
+	at org.openjdk.nashorn.internal.runtime.Context.compileScript(Context.java:785)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.asCompiledScript(NashornScriptEngine.java:486)
+	... 10 common frames omitted
+[1;91mERROR [main] [Cooja.java:1152] - Failed to load simulation: Failed to start plugin: Failed to set config for org.contikios.cooja.plugins.ScriptRunner[0;39m
+[1;91mERROR [main] [Cooja.java:1158] - TEST /home/user/contiki-ng/examples/pqc-iot-sim/experiments/exp02_pqc_stubs/exp02.csc FAILED
+[0;39m
+[1;91mERROR [main] [Cooja.java:1181] - Failed tests:
+/home/user/contiki-ng/examples/pqc-iot-sim/experiments/exp02_pqc_stubs/exp02.csc seed: null[0;39m
+
+> Task :run FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':run'.
+> Process 'command '/usr/local/bin/java'' finished with non-zero exit value 1
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 43s
+3 actionable tasks: 1 executed, 2 up-to-date
