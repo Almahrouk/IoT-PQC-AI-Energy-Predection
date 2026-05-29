@@ -1,0 +1,124 @@
+======================================================================
+  SECTION 1 — Dataset Inventory
+======================================================================
+  exp02                      rows=  99  topo=['star']  payloads=[100]  hash=0ade0582
+  exp03_star                 rows= 264  topo=['star']  payloads=[100]  hash=0328526f
+  exp04_chain                rows= 198  topo=['chain']  payloads=[100]  hash=194230e3
+  exp05_chain_p50            rows= 198  topo=['star']  payloads=[100]  hash=194230e3
+  exp05_chain_p100           rows= 198  topo=['star']  payloads=[100]  hash=194230e3
+  exp05_chain_p200           rows= 198  topo=['star']  payloads=[100]  hash=194230e3
+  exp05_star_p50             rows= 264  topo=['star']  payloads=[100]  hash=0328526f
+  exp05_star_p100            rows= 264  topo=['star']  payloads=[100]  hash=0328526f
+  exp05_star_p200            rows= 264  topo=['star']  payloads=[100]  hash=0328526f
+  master                     rows= 495  topo=['star', 'chain']  payloads=[50, 100, 200]  hash=41d19a14
+
+======================================================================
+  SECTION 2 — Data Quality Checks
+======================================================================
+  exp05 chain variants (p50/p100/p200) — unique content hashes: 1 — ⚠ IDENTICAL FILES
+  exp05 star  variants (p50/p100/p200) — unique content hashes: 1  — ⚠ IDENTICAL FILES
+
+  Payload bytes vs mean energy (master):
+    payload= 50  mean_energy=82.3684 mJ
+    payload=100  mean_energy=82.3684 mJ
+    payload=200  mean_energy=82.3684 mJ
+  → Payload has NO effect on energy (payload column not yet wired into simulation)
+
+  Topology vs mean energy (master):
+    topology=chain     mean_energy=82.3684 mJ
+    topology=star      mean_energy=82.3684 mJ
+  → Topology has NO effect on energy (topology column not yet wired in)
+
+  Missing values in master: 0 — clean
+
+======================================================================
+  SECTION 3 — Algorithm Energy Breakdown (master)
+======================================================================
+
+  Algorithm     Type   Mean(mJ)       Std       Min        Max
+  ------------------------------------------------------------
+  KYBER512      KEM       3.850     0.260     3.506      4.125
+  KYBER768      KEM       5.912     0.429     5.362      6.393
+  DILITHIUM2    SIG       6.462     2.607     4.537     10.106
+  KYBER1024     KEM       8.387     0.598     7.631      9.075
+  FALCON512     SIG       9.418     8.250     1.443     20.625
+  DILITHIUM3    SIG      10.312     4.133     7.218     16.087
+  DILITHIUM5    SIG      14.643     5.758    10.312     22.687
+  FALCON1024    SIG      18.631    16.622     2.681     41.250
+  SPHINCS128    SIG     149.187   188.296    16.500    412.500
+  SPHINCS192    SIG     276.375   348.078    30.937    763.125
+  SPHINCS256    SIG     402.875   508.347    45.375   1113.750
+
+======================================================================
+  SECTION 4 — Energy by Operation (mean mJ)
+======================================================================
+
+  Algorithm         KEYGEN   ENCAP_SIGN  DECAP_VERIFY
+  --------------------------------------------------
+  KYBER512           3.506        3.918         4.125
+  DILITHIUM2         4.537       10.106         4.743
+  KYBER768           5.362        5.981         6.393
+  DILITHIUM3         7.218       16.087         7.631
+  KYBER1024          7.631        8.456         9.075
+  DILITHIUM5        10.312       22.687        10.931
+  SPHINCS128        18.562      412.500        16.500
+  FALCON512         20.625        6.187         1.443
+  SPHINCS192        35.062      763.125        30.937
+  FALCON1024        41.250       11.962         2.681
+  SPHINCS256        49.500     1113.750        45.375
+
+  Key outliers:
+    SPHINCS256 ENCAP_SIGN = 1113.8 mJ (284× KYBER512)
+    FALCON1024 KEYGEN    = 41.2 mJ (12× KYBER512)
+
+======================================================================
+  SECTION 5 — Experiment Progression
+======================================================================
+  exp02                        99 rows  Baseline — 11 algs × 3 ops × 3 nodes, star, p=100
+  exp03_star                  264 rows  Expanded star — more nodes (2→8), star, p=100
+  exp04_chain                 198 rows  Chain topology added — 2-hop, p=100
+  exp05_chain_p50             198 rows  Payload 50 trial (chain) — ⚠ same as p100 in content
+  exp05_chain_p100            198 rows  Payload 100 trial (chain) — ⚠ same as p50 in content
+  exp05_chain_p200            198 rows  Payload 200 trial (chain) — ⚠ same as p50 in content
+  exp05_star_p50              264 rows  Payload 50 trial (star)  — ⚠ same as p100 in content
+  exp05_star_p100             264 rows  Payload 100 trial (star)  — ⚠ same as p50 in content
+  exp05_star_p200             264 rows  Payload 200 trial (star)  — ⚠ same as p50 in content
+  master                      495 rows  Combined master — star+chain, p=50/100/200, 11 algs  --> final valid experimental measurement combinations
+
+======================================================================
+  SECTION 6 — Network Structure in Master
+======================================================================
+
+  Topology distribution: {'star': 363, 'chain': 132}
+  Hop counts: {'chain': 2, 'star': 1}
+  Node count: 13 unique nodes
+  Node IDs: [2, 3, 4, 5, 6, 7, 8, 9, 55, 56, 107, 158, 222]
+
+  Nodes per topology:
+node_id   2    3    4    5    6    7    8    9    55   56   107  158  222
+topology                                                                 
+chain       0    0    0    0    0    0   33   33    0    0   33   33    0
+star       33   33   33   33   33   33   33   33   33   33    0    0   33
+
+======================================================================
+  SECTION 7 — IoT Feasibility (Cooja simulation data)
+======================================================================
+
+  Threshold: 50.0 mJ total (all 3 ops combined)
+
+  Algorithm      Total3Op(mJ)      IoT?
+  --------------------------------------
+  KYBER512             11.549  ✅ feasible
+  KYBER768             17.736  ✅ feasible
+  DILITHIUM2           19.386  ✅ feasible
+  KYBER1024            25.162  ✅ feasible
+  FALCON512            28.255  ✅ feasible
+  DILITHIUM3           30.936  ✅ feasible
+  DILITHIUM5           43.930  ✅ feasible
+  FALCON1024           55.893  ❌ too costly
+  SPHINCS128          447.562  ❌ too costly
+  SPHINCS192          829.124  ❌ too costly
+  SPHINCS256         1208.625  ❌ too costly
+
+  DONE ✅
+PS D:\Dana\IOT-NEW\WSL\IoT-PQC-AI-Energy-Predection\dataset\dataset> 

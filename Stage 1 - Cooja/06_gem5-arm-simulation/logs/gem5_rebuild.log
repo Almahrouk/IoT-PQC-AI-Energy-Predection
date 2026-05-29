@@ -1,0 +1,4 @@
+nohup: ignoring input
+
+scons: *** No SConstruct file found.
+File "/usr/lib/python3/dist-packages/SCons/Script/Main.py", line 1010, in _main

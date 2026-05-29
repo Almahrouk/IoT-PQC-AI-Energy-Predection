@@ -1,0 +1,464 @@
+Running Kyber512_KEYGEN ... Global frequency set at 1000000000000 ticks per second
+gem5 Simulator System.  https://www.gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 25.1.0.1
+gem5 compiled May 19 2026 16:16:10
+gem5 started May 26 2026 05:34:32
+gem5 executing on debian, pid 13433
+command line: /home/user/gem5/build/ARM/gem5.opt --outdir=/home/user/gem5_results/per_op/Kyber512_KEYGEN /home/user/gem5/configs/deprecated/example/se.py --cmd=/home/user/pqc_bench_arm_v4 '--options=Kyber512 KEYGEN' --cpu-type=AtomicSimpleCPU --mem-size=512MB --output=/home/user/gem5_results/per_op/Kyber512_KEYGEN/output.log
+
+**** REAL SIMULATION ****
+Exiting @ tick 376171500 because exiting with last active thread context
+insts=619447 ticks=376171500
+Running Kyber512_ENCAP ... Global frequency set at 1000000000000 ticks per second
+gem5 Simulator System.  https://www.gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 25.1.0.1
+gem5 compiled May 19 2026 16:16:10
+gem5 started May 26 2026 05:34:33
+gem5 executing on debian, pid 13445
+command line: /home/user/gem5/build/ARM/gem5.opt --outdir=/home/user/gem5_results/per_op/Kyber512_ENCAP /home/user/gem5/configs/deprecated/example/se.py --cmd=/home/user/pqc_bench_arm_v4 '--options=Kyber512 ENCAP' --cpu-type=AtomicSimpleCPU --mem-size=512MB --output=/home/user/gem5_results/per_op/Kyber512_ENCAP/output.log
+
+**** REAL SIMULATION ****
+Exiting @ tick 858242500 because exiting with last active thread context
+insts=1425657 ticks=858242500
+Running Kyber512_DECAP ... Global frequency set at 1000000000000 ticks per second
+gem5 Simulator System.  https://www.gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 25.1.0.1
+gem5 compiled May 19 2026 16:16:10
+gem5 started May 26 2026 05:34:35
+gem5 executing on debian, pid 13457
+command line: /home/user/gem5/build/ARM/gem5.opt --outdir=/home/user/gem5_results/per_op/Kyber512_DECAP /home/user/gem5/configs/deprecated/example/se.py --cmd=/home/user/pqc_bench_arm_v4 '--options=Kyber512 DECAP' --cpu-type=AtomicSimpleCPU --mem-size=512MB --output=/home/user/gem5_results/per_op/Kyber512_DECAP/output.log
+
+**** REAL SIMULATION ****
+Exiting @ tick 1356885500 because exiting with last active thread context
+insts=2239122 ticks=1356885500
+Running Kyber768_KEYGEN ... Global frequency set at 1000000000000 ticks per second
+gem5 Simulator System.  https://www.gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 25.1.0.1
+gem5 compiled May 19 2026 16:16:10
+gem5 started May 26 2026 05:34:38
+gem5 executing on debian, pid 13470
+command line: /home/user/gem5/build/ARM/gem5.opt --outdir=/home/user/gem5_results/per_op/Kyber768_KEYGEN /home/user/gem5/configs/deprecated/example/se.py --cmd=/home/user/pqc_bench_arm_v4 '--options=Kyber768 KEYGEN' --cpu-type=AtomicSimpleCPU --mem-size=512MB --output=/home/user/gem5_results/per_op/Kyber768_KEYGEN/output.log
+
+**** REAL SIMULATION ****
+Exiting @ tick 609658500 because exiting with last active thread context
+insts=1004095 ticks=609658500
+Running Kyber768_ENCAP ... Global frequency set at 1000000000000 ticks per second
+gem5 Simulator System.  https://www.gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 25.1.0.1
+gem5 compiled May 19 2026 16:16:10
+gem5 started May 26 2026 05:34:39
+gem5 executing on debian, pid 13482
+command line: /home/user/gem5/build/ARM/gem5.opt --outdir=/home/user/gem5_results/per_op/Kyber768_ENCAP /home/user/gem5/configs/deprecated/example/se.py --cmd=/home/user/pqc_bench_arm_v4 '--options=Kyber768 ENCAP' --cpu-type=AtomicSimpleCPU --mem-size=512MB --output=/home/user/gem5_results/per_op/Kyber768_ENCAP/output.log
+
+**** REAL SIMULATION ****
+Exiting @ tick 1379401500 because exiting with last active thread context
+insts=2292157 ticks=1379401500
+Running Kyber768_DECAP ... Global frequency set at 1000000000000 ticks per second
+gem5 Simulator System.  https://www.gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 25.1.0.1
+gem5 compiled May 19 2026 16:16:10
+gem5 started May 26 2026 05:34:42
+gem5 executing on debian, pid 13494
+command line: /home/user/gem5/build/ARM/gem5.opt --outdir=/home/user/gem5_results/per_op/Kyber768_DECAP /home/user/gem5/configs/deprecated/example/se.py --cmd=/home/user/pqc_bench_arm_v4 '--options=Kyber768 DECAP' --cpu-type=AtomicSimpleCPU --mem-size=512MB --output=/home/user/gem5_results/per_op/Kyber768_DECAP/output.log
+
+**** REAL SIMULATION ****
+Exiting @ tick 2165269500 because exiting with last active thread context
+insts=3578040 ticks=2165269500
+Running Kyber1024_KEYGEN ... Global frequency set at 1000000000000 ticks per second
+gem5 Simulator System.  https://www.gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 25.1.0.1
+gem5 compiled May 19 2026 16:16:10
+gem5 started May 26 2026 05:34:45
+gem5 executing on debian, pid 13506
+command line: /home/user/gem5/build/ARM/gem5.opt --outdir=/home/user/gem5_results/per_op/Kyber1024_KEYGEN /home/user/gem5/configs/deprecated/example/se.py --cmd=/home/user/pqc_bench_arm_v4 '--options=Kyber1024 KEYGEN' --cpu-type=AtomicSimpleCPU --mem-size=512MB --output=/home/user/gem5_results/per_op/Kyber1024_KEYGEN/output.log
+
+**** REAL SIMULATION ****
+Exiting @ tick 947047000 because exiting with last active thread context
+insts=1574671 ticks=947047000
+Running Kyber1024_ENCAP ... Global frequency set at 1000000000000 ticks per second
+gem5 Simulator System.  https://www.gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 25.1.0.1
+gem5 compiled May 19 2026 16:16:10
+gem5 started May 26 2026 05:34:47
+gem5 executing on debian, pid 13518
+command line: /home/user/gem5/build/ARM/gem5.opt --outdir=/home/user/gem5_results/per_op/Kyber1024_ENCAP /home/user/gem5/configs/deprecated/example/se.py --cmd=/home/user/pqc_bench_arm_v4 '--options=Kyber1024 ENCAP' --cpu-type=AtomicSimpleCPU --mem-size=512MB --output=/home/user/gem5_results/per_op/Kyber1024_ENCAP/output.log
+
+**** REAL SIMULATION ****
+Exiting @ tick 2098490500 because exiting with last active thread context
+insts=3503854 ticks=2098490500
+Running Kyber1024_DECAP ... Global frequency set at 1000000000000 ticks per second
+gem5 Simulator System.  https://www.gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 25.1.0.1
+gem5 compiled May 19 2026 16:16:10
+gem5 started May 26 2026 05:34:50
+gem5 executing on debian, pid 13530
+command line: /home/user/gem5/build/ARM/gem5.opt --outdir=/home/user/gem5_results/per_op/Kyber1024_DECAP /home/user/gem5/configs/deprecated/example/se.py --cmd=/home/user/pqc_bench_arm_v4 '--options=Kyber1024 DECAP' --cpu-type=AtomicSimpleCPU --mem-size=512MB --output=/home/user/gem5_results/per_op/Kyber1024_DECAP/output.log
+
+**** REAL SIMULATION ****
+Exiting @ tick 3265667500 because exiting with last active thread context
+insts=5424068 ticks=3265667500
+Running ML-KEM-512_KEYGEN ... Global frequency set at 1000000000000 ticks per second
+gem5 Simulator System.  https://www.gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 25.1.0.1
+gem5 compiled May 19 2026 16:16:10
+gem5 started May 26 2026 05:34:54
+gem5 executing on debian, pid 13543
+command line: /home/user/gem5/build/ARM/gem5.opt --outdir=/home/user/gem5_results/per_op/ML-KEM-512_KEYGEN /home/user/gem5/configs/deprecated/example/se.py --cmd=/home/user/pqc_bench_arm_v4 '--options=ML-KEM-512 KEYGEN' --cpu-type=AtomicSimpleCPU --mem-size=512MB --output=/home/user/gem5_results/per_op/ML-KEM-512_KEYGEN/output.log
+
+**** REAL SIMULATION ****
+Exiting @ tick 309981000 because exiting with last active thread context
+insts=527022 ticks=309981000
+Running ML-KEM-512_ENCAP ... Global frequency set at 1000000000000 ticks per second
+gem5 Simulator System.  https://www.gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 25.1.0.1
+gem5 compiled May 19 2026 16:16:10
+gem5 started May 26 2026 05:34:56
+gem5 executing on debian, pid 13555
+command line: /home/user/gem5/build/ARM/gem5.opt --outdir=/home/user/gem5_results/per_op/ML-KEM-512_ENCAP /home/user/gem5/configs/deprecated/example/se.py --cmd=/home/user/pqc_bench_arm_v4 '--options=ML-KEM-512 ENCAP' --cpu-type=AtomicSimpleCPU --mem-size=512MB --output=/home/user/gem5_results/per_op/ML-KEM-512_ENCAP/output.log
+
+**** REAL SIMULATION ****
+Exiting @ tick 647748500 because exiting with last active thread context
+insts=1095321 ticks=647748500
+Running ML-KEM-512_DECAP ... Global frequency set at 1000000000000 ticks per second
+gem5 Simulator System.  https://www.gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 25.1.0.1
+gem5 compiled May 19 2026 16:16:10
+gem5 started May 26 2026 05:34:57
+gem5 executing on debian, pid 13567
+command line: /home/user/gem5/build/ARM/gem5.opt --outdir=/home/user/gem5_results/per_op/ML-KEM-512_DECAP /home/user/gem5/configs/deprecated/example/se.py --cmd=/home/user/pqc_bench_arm_v4 '--options=ML-KEM-512 DECAP' --cpu-type=AtomicSimpleCPU --mem-size=512MB --output=/home/user/gem5_results/per_op/ML-KEM-512_DECAP/output.log
+
+**** REAL SIMULATION ****
+Exiting @ tick 1065261500 because exiting with last active thread context
+insts=1795967 ticks=1065261500
+Running ML-KEM-768_KEYGEN ... Global frequency set at 1000000000000 ticks per second
+gem5 Simulator System.  https://www.gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 25.1.0.1
+gem5 compiled May 19 2026 16:16:10
+gem5 started May 26 2026 05:34:59
+gem5 executing on debian, pid 13580
+command line: /home/user/gem5/build/ARM/gem5.opt --outdir=/home/user/gem5_results/per_op/ML-KEM-768_KEYGEN /home/user/gem5/configs/deprecated/example/se.py --cmd=/home/user/pqc_bench_arm_v4 '--options=ML-KEM-768 KEYGEN' --cpu-type=AtomicSimpleCPU --mem-size=512MB --output=/home/user/gem5_results/per_op/ML-KEM-768_KEYGEN/output.log
+
+**** REAL SIMULATION ****
+Exiting @ tick 513077500 because exiting with last active thread context
+insts=871247 ticks=513077500
+Running ML-KEM-768_ENCAP ... Global frequency set at 1000000000000 ticks per second
+gem5 Simulator System.  https://www.gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 25.1.0.1
+gem5 compiled May 19 2026 16:16:10
+gem5 started May 26 2026 05:35:01
+gem5 executing on debian, pid 13592
+command line: /home/user/gem5/build/ARM/gem5.opt --outdir=/home/user/gem5_results/per_op/ML-KEM-768_ENCAP /home/user/gem5/configs/deprecated/example/se.py --cmd=/home/user/pqc_bench_arm_v4 '--options=ML-KEM-768 ENCAP' --cpu-type=AtomicSimpleCPU --mem-size=512MB --output=/home/user/gem5_results/per_op/ML-KEM-768_ENCAP/output.log
+
+**** REAL SIMULATION ****
+Exiting @ tick 1050479000 because exiting with last active thread context
+insts=1774383 ticks=1050479000
+Running ML-KEM-768_DECAP ... Global frequency set at 1000000000000 ticks per second
+gem5 Simulator System.  https://www.gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 25.1.0.1
+gem5 compiled May 19 2026 16:16:10
+gem5 started May 26 2026 05:35:03
+gem5 executing on debian, pid 13604
+command line: /home/user/gem5/build/ARM/gem5.opt --outdir=/home/user/gem5_results/per_op/ML-KEM-768_DECAP /home/user/gem5/configs/deprecated/example/se.py --cmd=/home/user/pqc_bench_arm_v4 '--options=ML-KEM-768 DECAP' --cpu-type=AtomicSimpleCPU --mem-size=512MB --output=/home/user/gem5_results/per_op/ML-KEM-768_DECAP/output.log
+
+**** REAL SIMULATION ****
+Exiting @ tick 1700629500 because exiting with last active thread context
+insts=2865196 ticks=1700629500
+Running ML-KEM-1024_KEYGEN ... Global frequency set at 1000000000000 ticks per second
+gem5 Simulator System.  https://www.gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 25.1.0.1
+gem5 compiled May 19 2026 16:16:10
+gem5 started May 26 2026 05:35:06
+gem5 executing on debian, pid 13616
+command line: /home/user/gem5/build/ARM/gem5.opt --outdir=/home/user/gem5_results/per_op/ML-KEM-1024_KEYGEN /home/user/gem5/configs/deprecated/example/se.py --cmd=/home/user/pqc_bench_arm_v4 '--options=ML-KEM-1024 KEYGEN' --cpu-type=AtomicSimpleCPU --mem-size=512MB --output=/home/user/gem5_results/per_op/ML-KEM-1024_KEYGEN/output.log
+
+**** REAL SIMULATION ****
+Exiting @ tick 807939000 because exiting with last active thread context
+insts=1379586 ticks=807939000
+Running ML-KEM-1024_ENCAP ... Global frequency set at 1000000000000 ticks per second
+gem5 Simulator System.  https://www.gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 25.1.0.1
+gem5 compiled May 19 2026 16:16:10
+gem5 started May 26 2026 05:35:08
+gem5 executing on debian, pid 13628
+command line: /home/user/gem5/build/ARM/gem5.opt --outdir=/home/user/gem5_results/per_op/ML-KEM-1024_ENCAP /home/user/gem5/configs/deprecated/example/se.py --cmd=/home/user/pqc_bench_arm_v4 '--options=ML-KEM-1024 ENCAP' --cpu-type=AtomicSimpleCPU --mem-size=512MB --output=/home/user/gem5_results/per_op/ML-KEM-1024_ENCAP/output.log
+
+**** REAL SIMULATION ****
+Exiting @ tick 1658107500 because exiting with last active thread context
+insts=2816183 ticks=1658107500
+Running ML-KEM-1024_DECAP ... Global frequency set at 1000000000000 ticks per second
+gem5 Simulator System.  https://www.gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 25.1.0.1
+gem5 compiled May 19 2026 16:16:10
+gem5 started May 26 2026 05:35:10
+gem5 executing on debian, pid 13640
+command line: /home/user/gem5/build/ARM/gem5.opt --outdir=/home/user/gem5_results/per_op/ML-KEM-1024_DECAP /home/user/gem5/configs/deprecated/example/se.py --cmd=/home/user/pqc_bench_arm_v4 '--options=ML-KEM-1024 DECAP' --cpu-type=AtomicSimpleCPU --mem-size=512MB --output=/home/user/gem5_results/per_op/ML-KEM-1024_DECAP/output.log
+
+**** REAL SIMULATION ****
+Exiting @ tick 2654458000 because exiting with last active thread context
+insts=4498210 ticks=2654458000
+Running ML-DSA-44_KEYGEN ... Global frequency set at 1000000000000 ticks per second
+gem5 Simulator System.  https://www.gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 25.1.0.1
+gem5 compiled May 19 2026 16:16:10
+gem5 started May 26 2026 05:35:14
+gem5 executing on debian, pid 13652
+command line: /home/user/gem5/build/ARM/gem5.opt --outdir=/home/user/gem5_results/per_op/ML-DSA-44_KEYGEN /home/user/gem5/configs/deprecated/example/se.py --cmd=/home/user/pqc_bench_arm_v4 '--options=ML-DSA-44 KEYGEN' --cpu-type=AtomicSimpleCPU --mem-size=512MB --output=/home/user/gem5_results/per_op/ML-DSA-44_KEYGEN/output.log
+
+**** REAL SIMULATION ****
+Exiting @ tick 1226147000 because exiting with last active thread context
+insts=2076286 ticks=1226147000
+Running ML-DSA-44_SIGN ... Global frequency set at 1000000000000 ticks per second
+gem5 Simulator System.  https://www.gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 25.1.0.1
+gem5 compiled May 19 2026 16:16:10
+gem5 started May 26 2026 05:35:17
+gem5 executing on debian, pid 13664
+command line: /home/user/gem5/build/ARM/gem5.opt --outdir=/home/user/gem5_results/per_op/ML-DSA-44_SIGN /home/user/gem5/configs/deprecated/example/se.py --cmd=/home/user/pqc_bench_arm_v4 '--options=ML-DSA-44 SIGN' --cpu-type=AtomicSimpleCPU --mem-size=512MB --output=/home/user/gem5_results/per_op/ML-DSA-44_SIGN/output.log
+
+**** REAL SIMULATION ****
+Exiting @ tick 4714514000 because exiting with last active thread context
+insts=7766323 ticks=4714514000
+Running ML-DSA-44_VERIFY ... Global frequency set at 1000000000000 ticks per second
+gem5 Simulator System.  https://www.gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 25.1.0.1
+gem5 compiled May 19 2026 16:16:10
+gem5 started May 26 2026 05:35:23
+gem5 executing on debian, pid 13677
+command line: /home/user/gem5/build/ARM/gem5.opt --outdir=/home/user/gem5_results/per_op/ML-DSA-44_VERIFY /home/user/gem5/configs/deprecated/example/se.py --cmd=/home/user/pqc_bench_arm_v4 '--options=ML-DSA-44 VERIFY' --cpu-type=AtomicSimpleCPU --mem-size=512MB --output=/home/user/gem5_results/per_op/ML-DSA-44_VERIFY/output.log
+
+**** REAL SIMULATION ****
+Exiting @ tick 5953817000 because exiting with last active thread context
+insts=9831025 ticks=5953817000
+Running ML-DSA-65_KEYGEN ... Global frequency set at 1000000000000 ticks per second
+gem5 Simulator System.  https://www.gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 25.1.0.1
+gem5 compiled May 19 2026 16:16:10
+gem5 started May 26 2026 05:35:30
+gem5 executing on debian, pid 13689
+command line: /home/user/gem5/build/ARM/gem5.opt --outdir=/home/user/gem5_results/per_op/ML-DSA-65_KEYGEN /home/user/gem5/configs/deprecated/example/se.py --cmd=/home/user/pqc_bench_arm_v4 '--options=ML-DSA-65 KEYGEN' --cpu-type=AtomicSimpleCPU --mem-size=512MB --output=/home/user/gem5_results/per_op/ML-DSA-65_KEYGEN/output.log
+
+**** REAL SIMULATION ****
+Exiting @ tick 2110262500 because exiting with last active thread context
+insts=3597533 ticks=2110262500
+Running ML-DSA-65_SIGN ... Global frequency set at 1000000000000 ticks per second
+gem5 Simulator System.  https://www.gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 25.1.0.1
+gem5 compiled May 19 2026 16:16:10
+gem5 started May 26 2026 05:35:34
+gem5 executing on debian, pid 13701
+command line: /home/user/gem5/build/ARM/gem5.opt --outdir=/home/user/gem5_results/per_op/ML-DSA-65_SIGN /home/user/gem5/configs/deprecated/example/se.py --cmd=/home/user/pqc_bench_arm_v4 '--options=ML-DSA-65 SIGN' --cpu-type=AtomicSimpleCPU --mem-size=512MB --output=/home/user/gem5_results/per_op/ML-DSA-65_SIGN/output.log
+
+**** REAL SIMULATION ****
+Exiting @ tick 4808476000 because exiting with last active thread context
+insts=8070484 ticks=4808476000
+Running ML-DSA-65_VERIFY ... Global frequency set at 1000000000000 ticks per second
+gem5 Simulator System.  https://www.gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 25.1.0.1
+gem5 compiled May 19 2026 16:16:10
+gem5 started May 26 2026 05:35:39
+gem5 executing on debian, pid 13714
+command line: /home/user/gem5/build/ARM/gem5.opt --outdir=/home/user/gem5_results/per_op/ML-DSA-65_VERIFY /home/user/gem5/configs/deprecated/example/se.py --cmd=/home/user/pqc_bench_arm_v4 '--options=ML-DSA-65 VERIFY' --cpu-type=AtomicSimpleCPU --mem-size=512MB --output=/home/user/gem5_results/per_op/ML-DSA-65_VERIFY/output.log
+
+**** REAL SIMULATION ****
+Exiting @ tick 6871944500 because exiting with last active thread context
+insts=11544601 ticks=6871944500
+Running ML-DSA-87_KEYGEN ... Global frequency set at 1000000000000 ticks per second
+gem5 Simulator System.  https://www.gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 25.1.0.1
+gem5 compiled May 19 2026 16:16:10
+gem5 started May 26 2026 05:35:48
+gem5 executing on debian, pid 13726
+command line: /home/user/gem5/build/ARM/gem5.opt --outdir=/home/user/gem5_results/per_op/ML-DSA-87_KEYGEN /home/user/gem5/configs/deprecated/example/se.py --cmd=/home/user/pqc_bench_arm_v4 '--options=ML-DSA-87 KEYGEN' --cpu-type=AtomicSimpleCPU --mem-size=512MB --output=/home/user/gem5_results/per_op/ML-DSA-87_KEYGEN/output.log
+
+**** REAL SIMULATION ****
+Exiting @ tick 3594038000 because exiting with last active thread context
+insts=6136921 ticks=3594038000
+Running ML-DSA-87_SIGN ... Global frequency set at 1000000000000 ticks per second
+gem5 Simulator System.  https://www.gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 25.1.0.1
+gem5 compiled May 19 2026 16:16:10
+gem5 started May 26 2026 05:35:53
+gem5 executing on debian, pid 13738
+command line: /home/user/gem5/build/ARM/gem5.opt --outdir=/home/user/gem5_results/per_op/ML-DSA-87_SIGN /home/user/gem5/configs/deprecated/example/se.py --cmd=/home/user/pqc_bench_arm_v4 '--options=ML-DSA-87 SIGN' --cpu-type=AtomicSimpleCPU --mem-size=512MB --output=/home/user/gem5_results/per_op/ML-DSA-87_SIGN/output.log
+
+**** REAL SIMULATION ****
+Exiting @ tick 10371773000 because exiting with last active thread context
+insts=17353536 ticks=10371773000
+Running ML-DSA-87_VERIFY ... Global frequency set at 1000000000000 ticks per second
+gem5 Simulator System.  https://www.gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 25.1.0.1
+gem5 compiled May 19 2026 16:16:10
+gem5 started May 26 2026 05:36:05
+gem5 executing on debian, pid 13750
+command line: /home/user/gem5/build/ARM/gem5.opt --outdir=/home/user/gem5_results/per_op/ML-DSA-87_VERIFY /home/user/gem5/configs/deprecated/example/se.py --cmd=/home/user/pqc_bench_arm_v4 '--options=ML-DSA-87 VERIFY' --cpu-type=AtomicSimpleCPU --mem-size=512MB --output=/home/user/gem5_results/per_op/ML-DSA-87_VERIFY/output.log
+
+**** REAL SIMULATION ****
+Exiting @ tick 13895258500 because exiting with last active thread context
+insts=23321625 ticks=13895258500
+Running Falcon-512_KEYGEN ... Global frequency set at 1000000000000 ticks per second
+gem5 Simulator System.  https://www.gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 25.1.0.1
+gem5 compiled May 19 2026 16:16:10
+gem5 started May 26 2026 05:36:21
+gem5 executing on debian, pid 13762
+command line: /home/user/gem5/build/ARM/gem5.opt --outdir=/home/user/gem5_results/per_op/Falcon-512_KEYGEN /home/user/gem5/configs/deprecated/example/se.py --cmd=/home/user/pqc_bench_arm_v4 '--options=Falcon-512 KEYGEN' --cpu-type=AtomicSimpleCPU --mem-size=512MB --output=/home/user/gem5_results/per_op/Falcon-512_KEYGEN/output.log
+
+**** REAL SIMULATION ****
+Exiting @ tick 163210571000 because exiting with last active thread context
+insts=251746781 ticks=163210571000
+Running Falcon-512_SIGN ... Global frequency set at 1000000000000 ticks per second
+gem5 Simulator System.  https://www.gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 25.1.0.1
+gem5 compiled May 19 2026 16:16:10
+gem5 started May 26 2026 05:38:47
+gem5 executing on debian, pid 13775
+command line: /home/user/gem5/build/ARM/gem5.opt --outdir=/home/user/gem5_results/per_op/Falcon-512_SIGN /home/user/gem5/configs/deprecated/example/se.py --cmd=/home/user/pqc_bench_arm_v4 '--options=Falcon-512 SIGN' --cpu-type=AtomicSimpleCPU --mem-size=512MB --output=/home/user/gem5_results/per_op/Falcon-512_SIGN/output.log
+
+**** REAL SIMULATION ****
+Exiting @ tick 198475112000 because exiting with last active thread context
+insts=303533798 ticks=198475112000
+Running Falcon-512_VERIFY ... Global frequency set at 1000000000000 ticks per second
+gem5 Simulator System.  https://www.gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 25.1.0.1
+gem5 compiled May 19 2026 16:16:10
+gem5 started May 26 2026 05:41:44
+gem5 executing on debian, pid 13797
+command line: /home/user/gem5/build/ARM/gem5.opt --outdir=/home/user/gem5_results/per_op/Falcon-512_VERIFY /home/user/gem5/configs/deprecated/example/se.py --cmd=/home/user/pqc_bench_arm_v4 '--options=Falcon-512 VERIFY' --cpu-type=AtomicSimpleCPU --mem-size=512MB --output=/home/user/gem5_results/per_op/Falcon-512_VERIFY/output.log
+
+**** REAL SIMULATION ****
+Exiting @ tick 198892813000 because exiting with last active thread context
+insts=304172962 ticks=198892813000
+Running Falcon-1024_KEYGEN ... Global frequency set at 1000000000000 ticks per second
+gem5 Simulator System.  https://www.gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 25.1.0.1
+gem5 compiled May 19 2026 16:16:10
+gem5 started May 26 2026 05:44:47
+gem5 executing on debian, pid 13811
+command line: /home/user/gem5/build/ARM/gem5.opt --outdir=/home/user/gem5_results/per_op/Falcon-1024_KEYGEN /home/user/gem5/configs/deprecated/example/se.py --cmd=/home/user/pqc_bench_arm_v4 '--options=Falcon-1024 KEYGEN' --cpu-type=AtomicSimpleCPU --mem-size=512MB --output=/home/user/gem5_results/per_op/Falcon-1024_KEYGEN/output.log
+
+**** REAL SIMULATION ****
+Exiting @ tick 244909299000 because exiting with last active thread context
+insts=366482896 ticks=244909299000
+Running Falcon-1024_SIGN ... Global frequency set at 1000000000000 ticks per second
+gem5 Simulator System.  https://www.gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 25.1.0.1
+gem5 compiled May 19 2026 16:16:10
+gem5 started May 26 2026 05:48:19
+gem5 executing on debian, pid 13832
+command line: /home/user/gem5/build/ARM/gem5.opt --outdir=/home/user/gem5_results/per_op/Falcon-1024_SIGN /home/user/gem5/configs/deprecated/example/se.py --cmd=/home/user/pqc_bench_arm_v4 '--options=Falcon-1024 SIGN' --cpu-type=AtomicSimpleCPU --mem-size=512MB --output=/home/user/gem5_results/per_op/Falcon-1024_SIGN/output.log
+
+**** REAL SIMULATION ****
+Exiting @ tick 321933742000 because exiting with last active thread context
+insts=479599028 ticks=321933742000
+Running Falcon-1024_VERIFY ... Global frequency set at 1000000000000 ticks per second
+gem5 Simulator System.  https://www.gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 25.1.0.1
+gem5 compiled May 19 2026 16:16:10
+gem5 started May 26 2026 05:52:49
+gem5 executing on debian, pid 13847
+command line: /home/user/gem5/build/ARM/gem5.opt --outdir=/home/user/gem5_results/per_op/Falcon-1024_VERIFY /home/user/gem5/configs/deprecated/example/se.py --cmd=/home/user/pqc_bench_arm_v4 '--options=Falcon-1024 VERIFY' --cpu-type=AtomicSimpleCPU --mem-size=512MB --output=/home/user/gem5_results/per_op/Falcon-1024_VERIFY/output.log
+
+**** REAL SIMULATION ****
+Exiting @ tick 322754120000 because exiting with last active thread context
+insts=480841546 ticks=322754120000
+
+=== All done. Results in /home/user/gem5_results/raw_insts.txt ===
+Kyber512 KEYGEN 619447 376171500
+Kyber512 ENCAP 1425657 858242500
+Kyber512 DECAP 2239122 1356885500
+Kyber768 KEYGEN 1004095 609658500
+Kyber768 ENCAP 2292157 1379401500
+Kyber768 DECAP 3578040 2165269500
+Kyber1024 KEYGEN 1574671 947047000
+Kyber1024 ENCAP 3503854 2098490500
+Kyber1024 DECAP 5424068 3265667500
+ML-KEM-512 KEYGEN 527022 309981000
+ML-KEM-512 ENCAP 1095321 647748500
+ML-KEM-512 DECAP 1795967 1065261500
+ML-KEM-768 KEYGEN 871247 513077500
+ML-KEM-768 ENCAP 1774383 1050479000
+ML-KEM-768 DECAP 2865196 1700629500
+ML-KEM-1024 KEYGEN 1379586 807939000
+ML-KEM-1024 ENCAP 2816183 1658107500
+ML-KEM-1024 DECAP 4498210 2654458000
+ML-DSA-44 KEYGEN 2076286 1226147000
+ML-DSA-44 SIGN 7766323 4714514000
+ML-DSA-44 VERIFY 9831025 5953817000
+ML-DSA-65 KEYGEN 3597533 2110262500
+ML-DSA-65 SIGN 8070484 4808476000
+ML-DSA-65 VERIFY 11544601 6871944500
+ML-DSA-87 KEYGEN 6136921 3594038000
+ML-DSA-87 SIGN 17353536 10371773000
+ML-DSA-87 VERIFY 23321625 13895258500
+Falcon-512 KEYGEN 251746781 163210571000
+Falcon-512 SIGN 303533798 198475112000
+Falcon-512 VERIFY 304172962 198892813000
+Falcon-1024 KEYGEN 366482896 244909299000
+Falcon-1024 SIGN 479599028 321933742000
+Falcon-1024 VERIFY 480841546 322754120000

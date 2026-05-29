@@ -1,0 +1,3 @@
+exp,cv_r2_mean,cv_r2_std,insample_r2,mae_mj,n_rows,n_algorithms
+A_3fold_cv_full,0.9622,0.0378,0.9962,0.027671,33,11
+B_cross_alg_structural,-0.3844,1.7635,0.9962,0.027671,33,11

@@ -1,0 +1,46 @@
+warn: The se.py script is deprecated. It will be removed in future releases of  gem5.
+warn: Base 10 memory/cache size 512MB will be cast to base 2 size 512MiB.
+src/mem/dram_interface.cc:690: warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (512 Mbytes)
+src/base/statistics.hh:279: warn: One of the stats is a legacy stat. Legacy stat is a stat that does not belong to any statistics::Group. Legacy stat is deprecated.
+system.remote_gdb: Listening for connections on port 7000
+src/sim/syscall_emul.cc:86: warn: ignoring syscall set_robust_list(...)
+src/sim/syscall_emul.cc:86: warn: ignoring syscall sys_rseq(...)
+src/sim/mem_state.cc:443: info: Increasing stack size by one page.
+src/sim/syscall_emul.cc:86: warn: ignoring syscall mprotect(...)
+src/sim/syscall_emul.cc:86: warn: ignoring syscall sys_statx(...)
+src/sim/syscall_desc.hh:211: warn: Syscall 403 out of range, ignoring
+gem5.opt: src/arch/arm/linux/se_workload.cc:895: virtual void gem5::ArmISA::EmuLinux::syscall(gem5::ThreadContext*): Assertion `desc' failed.
+Program aborted at tick 5321000
+--- BEGIN LIBC BACKTRACE ---
+/home/user/gem5/build/ARM/gem5.opt(_ZN4gem515print_backtraceEv+0x16) [0x556c303e03b6]
+/home/user/gem5/build/ARM/gem5.opt(_ZN4gem512abortHandlerEi+0x3d) [0x556c3040761d]
+/lib/x86_64-linux-gnu/libc.so.6(+0x3fdf0) [0x7fc916a4bdf0]
+/lib/x86_64-linux-gnu/libc.so.6(+0x9495c) [0x7fc916aa095c]
+/lib/x86_64-linux-gnu/libc.so.6(gsignal+0x12) [0x7fc916a4bcc2]
+/lib/x86_64-linux-gnu/libc.so.6(abort+0x22) [0x7fc916a344ac]
+/lib/x86_64-linux-gnu/libc.so.6(__assert_perror_fail+0x0) [0x7fc916a34420]
+/home/user/gem5/build/ARM/gem5.opt(_ZN4gem56ArmISA8EmuLinux7syscallEPNS_13ThreadContextE+0x274) [0x556c30ad4704]
+/home/user/gem5/build/ARM/gem5.opt(_ZN4gem56ArmISA14SupervisorCall6invokeEPNS_13ThreadContextERKNS_14RefCountingPtrINS_10StaticInstEEE+0xd3) [0x556c30a1c263]
+/home/user/gem5/build/ARM/gem5.opt(_ZN4gem513BaseSimpleCPU9advancePCERKSt10shared_ptrINS_9FaultBaseEE+0xc5) [0x556c307ea525]
+/home/user/gem5/build/ARM/gem5.opt(_ZN4gem515AtomicSimpleCPU4tickEv+0x319) [0x556c307ce1c9]
+/home/user/gem5/build/ARM/gem5.opt(_ZN4gem510EventQueue10serviceOneEv+0xa5) [0x556c303f7595]
+/home/user/gem5/build/ARM/gem5.opt(_ZN4gem59doSimLoopEPNS_10EventQueueE+0x58) [0x556c30427b28]
+/home/user/gem5/build/ARM/gem5.opt(_ZN4gem58simulateEm+0x24e) [0x556c304281be]
+/home/user/gem5/build/ARM/gem5.opt(+0x1562e57) [0x556c2fdf2e57]
+/home/user/gem5/build/ARM/gem5.opt(+0x1409620) [0x556c2fc99620]
+/lib/x86_64-linux-gnu/libpython3.13.so.1.0(+0x16ee19) [0x7fc917d6ee19]
+/lib/x86_64-linux-gnu/libpython3.13.so.1.0(PyObject_Call+0x5e) [0x7fc917d112ee]
+/lib/x86_64-linux-gnu/libpython3.13.so.1.0(_PyEval_EvalFrameDefault+0x885) [0x7fc917e41ea5]
+/lib/x86_64-linux-gnu/libpython3.13.so.1.0(PyEval_EvalCode+0xd7) [0x7fc917e41547]
+/lib/x86_64-linux-gnu/libpython3.13.so.1.0(+0x23b580) [0x7fc917e3b580]
+/lib/x86_64-linux-gnu/libpython3.13.so.1.0(+0x16d471) [0x7fc917d6d471]
+/lib/x86_64-linux-gnu/libpython3.13.so.1.0(PyObject_Vectorcall+0x53) [0x7fc917d0f4c3]
+/lib/x86_64-linux-gnu/libpython3.13.so.1.0(_PyEval_EvalFrameDefault+0xfc3) [0x7fc917e425e3]
+/home/user/gem5/build/ARM/gem5.opt(+0x1533f05) [0x556c2fdc3f05]
+/home/user/gem5/build/ARM/gem5.opt(main+0x218) [0x556c2fc16c88]
+/lib/x86_64-linux-gnu/libc.so.6(+0x29ca8) [0x7fc916a35ca8]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0x85) [0x7fc916a35d65]
+/home/user/gem5/build/ARM/gem5.opt(_start+0x21) [0x556c2fc878b1]
+--- END LIBC BACKTRACE ---
+For more info on how to address this issue, please visit https://www.gem5.org/documentation/general_docs/common-errors/ 
+

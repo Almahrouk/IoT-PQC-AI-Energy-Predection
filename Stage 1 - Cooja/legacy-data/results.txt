@@ -1,0 +1,140 @@
+=================================================================
+  SECTION 1 — File Relationship
+=================================================================
+
+  pqc_energy_data.csv :   10 rows — 100-run AVERAGED result per alg
+  final_dataset.csv   :  200 rows — 20 individual timed runs
+  full_dataset.csv    :  200 rows — same as final (no CSV header)
+
+  final == full  →  True  (content hash match: 4ca69b1e)
+
+  Source program: pqc_energy_measure.c
+    Benchmarks 100 runs internally, saves the MEAN to pqc_energy_data.csv
+    final_dataset records 20 separate executions of that program
+
+=================================================================
+  SECTION 2 — Missing Algorithms (SPHINCS+)
+=================================================================
+
+  Algorithms targeted in .c : 12
+  Algorithms in CSV output  : 10
+  Missing                   : ['SPHINCS+-SHA2-128f', 'SPHINCS+-SHA2-256f']
+  Reason: liboqs build did not expose SPHINCS+ headers — skipped at runtime
+
+=================================================================
+  SECTION 3 — 100-Run Mean Benchmark (pqc_energy_data.csv)
+=================================================================
+
+  Algorithm        Type   Keygen(ms)    Op2(ms)    Op3(ms)   Total(ms)   TotalKB
+  ---------------------------------------------------------------------------
+  ML-KEM-512       KEM        0.0169     0.0158     0.0164      0.0491      3.12
+  Kyber768         KEM        0.0214     0.0230     0.0172      0.0616      4.56
+  ML-KEM-768       KEM        0.0200     0.0231     0.0223      0.0654      4.56
+  Kyber512         KEM        0.0352     0.0195     0.0131      0.0678      3.12
+  Kyber1024        KEM        0.0259     0.0307     0.0238      0.0804      6.16
+  ML-KEM-1024      KEM        0.0270     0.0286     0.0342      0.0898      6.16
+  ML-DSA-44        SIG        0.0393     0.1106     0.0367      0.1866      6.14
+  ML-DSA-65        SIG        0.0701     0.1771     0.0636      0.3108      9.08
+  Falcon-512       SIG        9.0148     0.3635     0.0719      9.4502      2.86
+  Falcon-1024      SIG       28.8729     0.7457     0.1462     29.7648      5.43
+
+=================================================================
+  SECTION 4 — Keygen Variance Across 20 Runs (final_dataset.csv)
+=================================================================
+
+  Algorithm         Mean(ms)       Std       Min       Max     CV%   Stability
+  ------------------------------------------------------------------------
+  ML-KEM-512          0.0134    0.0040    0.0106    0.0282    29.6%    variable
+  ML-KEM-768          0.0180    0.0019    0.0159    0.0229    10.7%      stable
+  Kyber768            0.0215    0.0055    0.0168    0.0406    25.5%    variable
+  Kyber1024           0.0257    0.0032    0.0221    0.0344    12.3%      stable
+  ML-KEM-1024         0.0267    0.0047    0.0222    0.0382    17.7%      stable
+  ML-DSA-44           0.0355    0.0042    0.0324    0.0495    11.8%      stable
+  Kyber512            0.0411    0.0198    0.0301    0.1177    48.1%    HIGH VAR
+  ML-DSA-65           0.0600    0.0076    0.0532    0.0816    12.7%      stable
+  Falcon-512          8.0790    1.2315    7.1423   11.7261    15.2%      stable
+  Falcon-1024        23.4138    2.4674   20.4476   30.7638    10.5%      stable
+
+=================================================================
+  SECTION 5 — Kyber vs ML-KEM Comparison
+=================================================================
+
+                    Pair   Kyber kg(ms)   ML-KEM kg(ms)      Faster
+  --------------------------------------------------------------------
+    Kyber512 vs ML-KEM-512         0.0352          0.0169  ML-KEM 2.1x
+    Kyber768 vs ML-KEM-768         0.0214          0.0200  ML-KEM 1.1x
+   Kyber1024 vs ML-KEM-1024         0.0259          0.0270  Kyber 1.0x
+
+  Note: ML-KEM is the NIST-standardised rename of Kyber.
+  Performance differences reflect different run conditions, not algorithm changes.
+
+=================================================================
+  SECTION 6 — Sign vs Verify Ratio (SIG algorithms)
+=================================================================
+
+  Algorithm         Sign(ms)   Verify(ms)   Sign/Verify
+  ----------------------------------------------------
+  Falcon-1024         0.6108       0.1165           5.2x
+  Falcon-512          0.3107       0.0613           5.1x
+  ML-DSA-44           0.0966       0.0335           2.9x
+  ML-DSA-65           0.1543       0.0552           2.8x
+
+  Falcon sign is ~5x slower than verify — unusual for SIGs.
+  ML-DSA sign is ~3x slower than verify — more typical.
+
+=================================================================
+  SECTION 7 — ARM Cortex-M4 Estimated Energy (×55 scale, 80mW)
+=================================================================
+
+  Assumptions: ARM/x86 speed ratio = 55.0×, active power = 80.0 mW (64MHz, 1.25mW/MHz)
+
+  Algorithm         x86 total(ms)   ARM est(ms)   ARM energy(mJ)  IoT <50mJ
+  ------------------------------------------------------------------------
+  ML-KEM-512               0.0491          2.70            0.216          ✅
+  Kyber768                 0.0616          3.39            0.271          ✅
+  ML-KEM-768               0.0654          3.60            0.288          ✅
+  Kyber512                 0.0678          3.73            0.298          ✅
+  Kyber1024                0.0804          4.42            0.354          ✅
+  ML-KEM-1024              0.0898          4.94            0.395          ✅
+  ML-DSA-44                0.1866         10.26            0.821          ✅
+  ML-DSA-65                0.3108         17.09            1.368          ✅
+  Falcon-512               9.4502        519.76           41.581          ✅
+  Falcon-1024             29.7648       1637.06          130.965          ❌
+
+=================================================================
+  SECTION 8 — Key & Signature Sizes
+=================================================================
+
+  Algorithm        Type    pk(B)    sk(B)   ct/sig(B)   total(B)
+  ------------------------------------------------------------
+  Falcon-512       SIG       897     1281         752       2930
+  Kyber512         KEM       800     1632         768       3200
+  ML-KEM-512       KEM       800     1632         768       3200
+  Kyber768         KEM      1184     2400        1088       4672
+  ML-KEM-768       KEM      1184     2400        1088       4672
+  Falcon-1024      SIG      1793     2305        1462       5560
+  ML-DSA-44        SIG      1312     2560        2420       6292
+  Kyber1024        KEM      1568     3168        1568       6304
+  ML-KEM-1024      KEM      1568     3168        1568       6304
+  ML-DSA-65        SIG      1952     4032        3309       9293
+
+=================================================================
+  SECTION 9 — C Source Code Audit (pqc_energy_measure.c)
+=================================================================
+
+  ✅ Correct: uses clock() for timing, loops 100 iterations per algorithm
+  ✅ Correct: averages timing across runs before saving to CSV
+  ✅ Correct: frees all malloc'd buffers and OQS objects
+  ✅ Correct: tests KEM and SIG operations separately
+
+  ⚠ clock() measures CPU time, not wall time — fine for benchmarking
+    but will differ from cycle-counter approaches
+  ⚠ SPHINCS+ test_sig("SPHINCS+-SHA2-128f-simple") will silently skip
+    via the if(!sig) check — no CSV row is written, no error to user
+  ⚠ msg[64] is fixed zeros (0xAB) for all signature tests — not
+    representative of real varied messages, but fine for timing
+  ⚠ No warm-up run before timing — first iteration may include cache
+    cold-start overhead (most visible in Kyber512 CV=48%)
+
+  DONE ✅
+PS D:\Dana\IOT-NEW\WSL\IoT-PQC-AI-Energy-Predection\legacy-data> 
