@@ -1,0 +1,8 @@
+exp,model,cv_r2_mean,cv_r2_std,cv_mape_pct,n_rows,n_algorithms,expanded,run_id
+A_5fold_cv_Ridge,Ridge,-8.3709,18.6673,88.76,33,11,False,20260801_162934
+A_5fold_cv_RandomForest,Random Forest,0.9612,0.0598,15.58,33,11,False,20260801_162934
+A_5fold_cv_GradBoosting,Grad. Boosting,0.9858,0.0268,6.69,33,11,False,20260801_162934
+B_KFold_Structural,Random Forest (GroupKFold),0.962,0.057,,33,11,False,20260801_162934
+B_KFold_Full,Random Forest (GroupKFold),0.9612,0.0598,,33,11,False,20260801_162934
+B_GroupKFold_Structural,Random Forest (GroupKFold),-0.3844,1.7635,,33,11,False,20260801_162934
+B_GroupKFold_Full,Random Forest (GroupKFold),-2.6542,5.6919,,33,11,False,20260801_162934
