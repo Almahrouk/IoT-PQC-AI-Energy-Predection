@@ -1,8 +1,7 @@
 #ifndef PQC_STUB_H
 #define PQC_STUB_H
 
-/* PQC timing stubs (microseconds) derived from gem5 ARM Cortex-M4 benchmarks.
-   Replace these values with your actual gem5 measurements once validated. */
+/* PQC timing stubs (microseconds) derived from gem5 ARM Cortex-M4 benchmarks */
 
 typedef enum {
   PQC_KYBER_512 = 0,
