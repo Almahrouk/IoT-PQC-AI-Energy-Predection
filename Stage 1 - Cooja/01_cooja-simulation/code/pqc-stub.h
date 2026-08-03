@@ -11,6 +11,9 @@
  *
 */
 
+#include <stdint.h>
+#include <stdio.h>
+
 #ifndef PQC_BENCH_FREQ_MHZ
 #define PQC_BENCH_FREQ_MHZ 24u
 #endif
@@ -62,6 +65,20 @@ static const char *pqc_algo_name[PQC_ALGO_COUNT] = {
   "SPHINCS128","SPHINCS192","SPHINCS256"
 };
 
+static const char *pqc_algo_type_name[PQC_ALGO_COUNT] = {
+    "KEM",  // KYBER512
+    "KEM",  // KYBER768
+    "KEM",  // KYBER1024
+    "SIG",  // DILITHIUM2
+    "SIG",  // DILITHIUM3
+    "SIG",  // DILITHIUM5
+    "SIG",  // FALCON512
+    "SIG",  // FALCON1024
+    "SIG",  // SPHINCS128
+    "SIG",  // SPHINCS192
+    "SIG"   // SPHINCS256
+};
+
 static const char *pqc_op_name[PQC_OP_COUNT] = {
   "KEYGEN","ENCAP","DECAP","SIGN","VERIFY"
 };
@@ -77,5 +94,33 @@ static inline uint32_t pqc_us_per_op(pqc_algo_t algo, pqc_op_t op) {
     (clock_ticks_out) = (_us * CLOCK_SECOND) / 1000000UL; \
     clock_delay_usec(_us); \
   } while(0)
+
+static inline void pqc_simulate_op(uint8_t node_id,
+                                   pqc_algo_t algo,
+                                   pqc_op_t op)
+{
+    uint32_t cycles = pqc_cycles_per_op[algo][op];
+
+    uint32_t time_us =
+        cycles / PQC_BENCH_FREQ_MHZ;
+
+    uint32_t energy_uj =
+        (uint32_t)((uint64_t)time_us * 66 / 1000);
+
+
+    printf(
+        "PQC_LOG node=%u hop=%u topo=%s payload=%u algo=%s type=%s op=%s cycles=%lu time_us=%lu     energy_uj=%lu\n",
+        node_id,
+        PQC_HOP_COUNT,
+        PQC_TOPO,
+        PQC_PAYLOAD,
+        pqc_algo_name[algo],
+        pqc_algo_type_name[algo],
+        pqc_op_name[op],
+        (unsigned long)cycles,
+        (unsigned long)time_us,
+        (unsigned long)energy_uj
+        );
+}
 
 #endif

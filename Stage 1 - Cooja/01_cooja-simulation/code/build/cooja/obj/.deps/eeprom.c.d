@@ -1,3 +1,4 @@
-build/cooja/obj/eeprom.o: ../../../arch/platform/cooja/dev/eeprom.c \
- ../../../os/dev/eeprom.h
-../../../os/dev/eeprom.h:
+build/cooja/obj/eeprom.o: \
+ /home/user/contiki-ng/arch/platform/cooja/dev/eeprom.c \
+ /home/user/contiki-ng/os/dev/eeprom.h
+/home/user/contiki-ng/os/dev/eeprom.h:

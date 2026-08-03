@@ -150,7 +150,7 @@
       <script>
 TIMEOUT(300000, log.testFailed("Timed out"));
 var fw = new java.io.FileWriter(
-  "/home/user/contiki-ng/examples/pqc-iot-sim/experiments/exp05_payload_sweep/results/pqc_raw_star_p200.log",
+  "/home/user/simulation/experiments/exp05_payload_sweep/results/pqc_raw_star_p200.log",
   false);
 var bw = new java.io.BufferedWriter(fw);
 var done = 0;

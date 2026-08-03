@@ -1,0 +1,36 @@
+
+============================================================
+  PQC Energy Prediction — Baseline Results
+============================================================
+
+── Random Forest ──────────────────────────────
+  RMSE:              0.0000 mJ
+  MAE:               0.0000 mJ
+  R²:                1.0000
+  CV R² (5-fold): 1.0000 ± 0.0000
+
+── Gradient Boosting ──────────────────────────────
+  RMSE:              0.4012 mJ
+  MAE:               0.2750 mJ
+  R²:                1.0000
+  CV R² (5-fold): 1.0000 ± 0.0000
+
+── XGBoost ──────────────────────────────
+  RMSE:              8.2612 mJ
+  MAE:               3.8087 mJ
+  R²:                0.9999
+  CV R² (5-fold): 1.0000 ± 0.0000
+
+============================================================
+  Best model: Random Forest  (R² = 1.0000)
+============================================================
+
+Feature importances (Random Forest):
+       feature   importance
+     operation 6.631842e-01
+     algorithm 2.701760e-01
+security_level 4.639149e-02
+     algo_type 2.024838e-02
+      topology 2.348279e-16
+     hop_count 1.692044e-16
+ payload_bytes 0.000000e+00

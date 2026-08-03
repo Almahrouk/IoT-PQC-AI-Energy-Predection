@@ -114,7 +114,7 @@
       <script>
 TIMEOUT(180000, log.testFailed("Timed out"));
 var outFile = new java.io.FileWriter(
-  "/home/user/contiki-ng/examples/pqc-iot-sim/experiments/exp02_pqc_stubs/results/pqc_raw.log",
+  "/home/user/simulation/experiments/exp02_pqc_stubs/results/pqc_raw.log",
   true);
 var bw = new java.io.BufferedWriter(outFile);
 var done = 0;   <!-- Counts how many nodes finished -->

@@ -1,3 +1,4 @@
-build/cooja/obj/cooja_mt.o: ../../../arch/platform/cooja/sys/cooja_mt.c \
- ../../../arch/platform/cooja/./sys/cooja_mt.h
-../../../arch/platform/cooja/./sys/cooja_mt.h:
+build/cooja/obj/cooja_mt.o: \
+ /home/user/contiki-ng/arch/platform/cooja/sys/cooja_mt.c \
+ /home/user/contiki-ng/arch/platform/cooja/./sys/cooja_mt.h
+/home/user/contiki-ng/arch/platform/cooja/./sys/cooja_mt.h:

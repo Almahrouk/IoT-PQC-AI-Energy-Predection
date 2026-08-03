@@ -5,7 +5,7 @@
 # =====================================================
 set -e
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-CNG_PATH="$HOME/contiki-ng"
+CNG_PATH="/home/user/New IOT/IoT-PQC-AI-Energy-Predection/Stage 1 - Cooja/contiki-ng"
 CSC="$SCRIPT_DIR/exp01.csc"
 RESULTS="$SCRIPT_DIR/results"
 TIMESTAMP=$(date +%Y%m%d_%H%M%S)
@@ -22,9 +22,10 @@ mkdir -p "$RESULTS"
 docker run --rm --privileged \
   --sysctl net.ipv6.conf.all.disable_ipv6=0 \
   --mount type=bind,source="$CNG_PATH",destination=/home/user/contiki-ng \
+  --mount type=bind,source="$(dirname "$(dirname "$SCRIPT_DIR")")",destination=/home/user/simulation \
   contiker/contiki-ng \
   bash -c "cd /home/user/contiki-ng/tools/cooja && ./gradlew run \
-    --args=\"--no-gui --autostart /home/user/contiki-ng/examples/pqc-iot-sim/experiments/exp01_baseline/exp01.csc\"" \
+    --args=\"--no-gui --autostart /home/user/simulation/experiments/exp01_baseline/exp01.csc\"" \
   2>&1 | tee "$LOG"
 
 if grep -q "TEST OK" "$LOG"; then

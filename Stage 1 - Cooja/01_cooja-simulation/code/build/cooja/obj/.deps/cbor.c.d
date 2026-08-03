@@ -1,2 +1,3 @@
-build/cooja/obj/cbor.o: ../../../os/lib/cbor.c ../../../os/lib/cbor.h
-../../../os/lib/cbor.h:
+build/cooja/obj/cbor.o: /home/user/contiki-ng/os/lib/cbor.c \
+ /home/user/contiki-ng/os/lib/cbor.h
+/home/user/contiki-ng/os/lib/cbor.h:

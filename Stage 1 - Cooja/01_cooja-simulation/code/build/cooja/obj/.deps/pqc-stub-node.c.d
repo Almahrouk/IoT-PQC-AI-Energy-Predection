@@ -20,7 +20,7 @@ build/cooja/obj/pqc-stub-node.o: pqc-stub-node.c \
  /home/user/contiki-ng/arch/platform/cooja/./sys/cooja_mt.h \
  /home/user/contiki-ng/os/sys/pt.h /home/user/contiki-ng/os/sys/clock.h \
  /home/user/contiki-ng/os/net/linkaddr.h \
- /home/user/contiki-ng/os/sys/node-id.h pqc-timing-stubs.h
+ /home/user/contiki-ng/os/sys/node-id.h pqc-stub.h
 /home/user/contiki-ng/os/contiki.h:
 /home/user/contiki-ng/arch/platform/cooja/./contiki-conf.h:
 /home/user/contiki-ng/os/contiki-default-conf.h:
@@ -45,4 +45,4 @@ build/cooja/obj/pqc-stub-node.o: pqc-stub-node.c \
 /home/user/contiki-ng/os/sys/clock.h:
 /home/user/contiki-ng/os/net/linkaddr.h:
 /home/user/contiki-ng/os/sys/node-id.h:
-pqc-timing-stubs.h:
+pqc-stub.h:

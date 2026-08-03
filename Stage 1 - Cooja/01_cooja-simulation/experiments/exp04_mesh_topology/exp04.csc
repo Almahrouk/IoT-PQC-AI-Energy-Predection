@@ -17,7 +17,7 @@
       <identifier>pqcroot1</identifier>
       <description>PQC Root Node</description>
       <source>[CONFIG_DIR]/../../code/pqc-root-node.c</source>
-      <commands>$(MAKE) -j$(CPUS) pqc-root-node.cooja TARGET=cooja</commands>
+      <commands>$(MAKE) -j$(CPUS) TARGET=cooja PQC_PAYLOAD=100 PQC_HOP_COUNT=2 PQC_TOPO=chain pqc-stub-node.cooja </commands>
       <moteinterface>org.contikios.cooja.interfaces.Position</moteinterface>
       <moteinterface>org.contikios.cooja.interfaces.Battery</moteinterface>
       <moteinterface>org.contikios.cooja.contikimote.interfaces.ContikiMoteID</moteinterface>
@@ -128,7 +128,7 @@
       <script>
 TIMEOUT(300000, log.testFailed("Timed out"));
 var fw = new java.io.FileWriter(
-  "/home/user/contiki-ng/examples/pqc-iot-sim/experiments/exp04_mesh_topology/results/pqc_raw.log",
+  "/home/user/simulation/experiments/exp04_mesh_topology/results/pqc_raw.log",
   false);
 var bw = new java.io.BufferedWriter(fw);
 var done = 0;

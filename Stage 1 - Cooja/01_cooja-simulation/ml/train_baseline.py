@@ -25,8 +25,8 @@ import warnings
 warnings.filterwarnings("ignore")
 
 # ── Paths ─────────────────────────────────────────────────────────
-BASE    = os.path.expanduser("~/contiki-ng/examples/pqc-iot-sim")
-DATA    = f"{BASE}/results/dataset/master_dataset.csv"
+BASE = "/home/user/New IOT/IoT-PQC-AI-Energy-Predection/Stage 1 - Cooja/01_cooja-simulation"
+DATA = f"{BASE}/results/master_dataset.csv"
 OUT_DIR = f"{BASE}/ml/results"
 os.makedirs(OUT_DIR, exist_ok=True)
 
@@ -36,8 +36,17 @@ df = pd.read_csv(DATA)
 print(f"  {len(df)} rows, {df.shape[1]} columns")
 
 # ── Features & target ─────────────────────────────────────────────
-CATEGORICAL = ['algorithm', 'algo_type', 'operation', 'topology']
-NUMERICAL   = ['security_level', 'hop_count', 'payload_bytes', 'cycles', 'time_us']
+CATEGORICAL = [
+    'algorithm',
+    'algo_type',
+    'operation',
+    'topology'
+]
+NUMERICAL = [
+    'security_level',
+    'hop_count',
+    'payload_bytes'
+]
 TARGET      = 'energy_mj'
 
 # Encode categoricals
