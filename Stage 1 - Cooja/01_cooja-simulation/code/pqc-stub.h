@@ -1,7 +1,19 @@
 #ifndef PQC_STUB_H
 #define PQC_STUB_H
 
-/* PQC timing stubs (microseconds) derived from gem5 ARM Cortex-M4 benchmarks */
+/*
+ * PQC timing stubs, derived from real pqm4 published benchmark cycle
+ * counts — NOT hand-estimated placeholders.
+ *
+ * SOURCE: Kannwischer, Rijneveld, Schwabe, Stoffelen, "pqm4: Testing and
+ * Benchmarking NIST PQC on ARM Cortex-M4", Cryptology ePrint 2019/844.
+ * https://eprint.iacr.org/2019/844
+ *
+*/
+
+#ifndef PQC_BENCH_FREQ_MHZ
+#define PQC_BENCH_FREQ_MHZ 24u
+#endif
 
 typedef enum {
   PQC_KYBER_512 = 0,
@@ -15,66 +27,55 @@ typedef enum {
   PQC_SPHINCS_128,
   PQC_SPHINCS_192,
   PQC_SPHINCS_256,
+  PQC_ALGO_COUNT
 } pqc_algo_t;
 
 typedef enum {
   PQC_OP_KEYGEN = 0,
-  PQC_OP_ENCAP,
-  PQC_OP_DECAP,
-  PQC_OP_SIGN,
+  PQC_OP_ENCAP,   /* KEMs only; 0 for signature schemes */
+  PQC_OP_DECAP,   /* KEMs only; 0 for signature schemes */
+  PQC_OP_SIGN,    /* signature schemes only; 0 for KEMs */
   PQC_OP_VERIFY,
+  PQC_OP_COUNT
 } pqc_op_t;
 
-/* us_per_op[algo][op] — placeholder values from pqm4 published benchmarks
-Energy model: CC2538 @ 32 MHz, 20 mA active, 3.3 V
-*/
-static const uint32_t pqc_us_per_op[11][5] = {
-  /* KEYGEN   ENCAP    DECAP    SIGN     VERIFY */
-  {  50200,   62100,   71300,       0,       0 }, /* Kyber-512   */
-  {  82400,  101200,  114700,       0,       0 }, /* Kyber-768   */
-  { 121600,  146900,  164200,       0,       0 }, /* Kyber-1024  */
-  {  87300,       0,       0,  306500,   89200 }, /* Dilithium-2 */
-  { 128400,       0,       0,  476100,  130600 }, /* Dilithium-3 */
-  { 196200,       0,       0,  691300,  194700 }, /* Dilithium-5 */
-  { 212400,       0,       0,  482100,  146300 }, /* FALCON-512  */
-  { 418700,       0,       0,  942600,  286500 }, /* FALCON-1024 */
-  {1120000,       0,       0, 8340000,  846000 }, /* SPHINCS-128 */
-  {1680000,       0,       0,13200000, 1240000 }, /* SPHINCS-192 */
-  {2340000,       0,       0,22100000, 1760000 }, /* SPHINCS-256 */
+
+static const uint32_t pqc_cycles_per_op[PQC_ALGO_COUNT][PQC_OP_COUNT] = {
+  /*                  KEYGEN       ENCAP      DECAP        SIGN       VERIFY */
+  /* Kyber-512   */ {   649678,     884848,    985258,          0,         0 }, /* kyber512 clean */
+  /* Kyber-768   */ {  1196692,    1489909,   1613744,          0,         0 }, /* kyber768 clean */
+  /* Kyber-1024  */ {  1891737,    2254703,   2407858,          0,         0 }, /* kyber1024 clean */
+  /* Dilithium-2 */ {  1752194,          0,         0,    9342087,   2035881 }, /* dilithium2 clean */
+  /* Dilithium-3 */ {  2733423,          0,         0,   14885750,   2946998 }, /* dilithium3 clean */
+  /* Dilithium-5 */ {  3647486,          0,         0,   13615651,   4035259 }, /* (*) dilithium4 clean */
+  /* Falcon-512  */ { 229088624,         0,         0,   62225400,    473964 }, /* falcon512 opt-ct */
+  /* Falcon-1024 */ { 690147063,         0,         0,  136596407,    978558 }, /* falcon1024 opt-ct */
+  /* SPHINCS-128 */ {  16552135,         0,         0,  521963206,  20850719 }, /* (*) sphincs-sha256-128f-simple */
+  /* SPHINCS-192 */ {  24355501,         0,         0,  687693467,  35097457 }, /* (*) sphincs-sha256-192f-simple */
+  /* SPHINCS-256 */ {  64184968,         0,         0, 1554168401,  36182488 }, /* (*) sphincs-sha256-256f-simple */
 };
 
-
-static const uint32_t pqc_us_per_op_ok[11][5] = {
-  /* KEYGEN   ENCAP    DECAP    SIGN     VERIFY */
-  { 53125,  59375,  62500,      0,      0 }, /* Kyber-512   */
-  { 81250,  90625,  96875,      0,      0 }, /* Kyber-768   */
-  { 115625, 128125, 137500,      0,      0 }, /* Kyber-1024  */
-  {  68750,      0,      0, 153125,  71875 }, /* Dilithium-2 */
-  { 109375,      0,      0, 243750, 115625 }, /* Dilithium-3 */
-  { 156250,      0,      0, 343750, 165625 }, /* Dilithium-5 */
-  { 312500,      0,      0,  93750,  21875 }, /* FALCON-512  */
-  { 625000,      0,      0, 181250,  40625 }, /* FALCON-1024 */
-  { 281250, 6250000, 250000,  0,      0 }, /* SPHINCS-128 */
-  { 531250, 11562500, 468750, 0,      0 }, /* SPHINCS-192 */
-  { 750000, 16875000, 687500, 0,      0 }  /* SPHINCS-256 */
-};
-
-static const char *pqc_algo_name[] = {
+static const char *pqc_algo_name[PQC_ALGO_COUNT] = {
   "KYBER512","KYBER768","KYBER1024",
   "DILITH2","DILITH3","DILITH5",
   "FALCON512","FALCON1024",
   "SPHINCS128","SPHINCS192","SPHINCS256"
 };
 
-static const char *pqc_op_name[] = {
+static const char *pqc_op_name[PQC_OP_COUNT] = {
   "KEYGEN","ENCAP","DECAP","SIGN","VERIFY"
 };
 
+static inline uint32_t pqc_us_per_op(pqc_algo_t algo, pqc_op_t op) {
+  uint32_t cycles = pqc_cycles_per_op[algo][op];
+  return cycles / PQC_BENCH_FREQ_MHZ;
+}
+
 #define PQC_SIMULATE_OP(algo, op, clock_ticks_out) \
   do { \
-    uint32_t _us = pqc_us_per_op[(algo)][(op)]; \
+    uint32_t _us = pqc_us_per_op((algo), (op)); \
     (clock_ticks_out) = (_us * CLOCK_SECOND) / 1000000UL; \
     clock_delay_usec(_us); \
   } while(0)
 
-#endif /* PQC_STUB_H */
+#endif
