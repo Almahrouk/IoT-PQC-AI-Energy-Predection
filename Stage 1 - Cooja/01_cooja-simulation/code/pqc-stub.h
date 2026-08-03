@@ -43,6 +43,7 @@ static const uint32_t pqc_us_per_op[11][5] = {
   {2340000,       0,       0,22100000, 1760000 }, /* SPHINCS-256 */
 };
 
+
 static const uint32_t pqc_us_per_op_ok[11][5] = {
   /* KEYGEN   ENCAP    DECAP    SIGN     VERIFY */
   { 53125,  59375,  62500,      0,      0 }, /* Kyber-512   */
